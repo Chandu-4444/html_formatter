@@ -10,7 +10,6 @@
 <body>
     <div>
         <form action="" method="post">
-            <!-- {% csrf_token %} -->
             <label for="">Enter Text:</label>
             <br>
             <textarea name="text" id="text_box" cols="50" rows="10"></textarea>
@@ -23,7 +22,7 @@
 
     <script>
         $('#text_box').on('input', function (e) {
-        //  e.preventDefault();
+            e.preventDefault();
          $.ajax({
             type: "POST",
             url: "{% url 'index' %}",
